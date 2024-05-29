@@ -1,0 +1,198 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #E5E5E5;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .topo-do-site .flex {
+        flex-direction: column; 
+        gap: 30px;
+    }
+
+    .topo-do-site .txt-topo-site {
+        max-width: 100%; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .topo-do-site .img-topo-site img {
+        margin-left: 0;
+    }
+
+    .social-icons {
+        justify-content: center; 
+    }
+}
+
+.topo-do-site {
+    padding: 40px 4%;
+}
+
+.topo-do-site .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+.topo-do-site .txt-topo-site {
+    max-width: calc(50% - 20px); 
+    margin-right: 20px; 
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.txt-topo-site h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    color: #1f272d;
+    margin-bottom: 15px;
+}
+
+@keyframes digitar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+#texto-digitado {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid; /* Simula o cursor de digitação */
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    margin-right: .15em; /* Espaçamento entre o texto e o cursor */
+    animation: digitar 2s steps(40, end); /* Velocidade e suavidade do efeito de digitação */
+}
+
+.txt-topo-site p {
+    font-size: 17px;
+    margin-bottom: 15px; /* Espaçamento abaixo do parágrafo */
+}
+
+/* ESTILO CABEÇALHO */
+
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    color: #1f272d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #7093a0;
+    transform: scale(1.05);
+}
+
+header nav li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button {
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #1f272d;
+    color: #E5E5E5;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ESTILO CABEÇALHO */
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+/* Estilos para a seção Sobre */
+.Sobre {
+    padding: 40px 4%; /* Adiciona um espaçamento interno à seção */
+    background-color: #E5E5E5; /* Define a cor de fundo da seção */
+}
+
+.Sobre .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
+}
+
+.img-sobre img {
+    max-width: 300px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para evitar espaços em branco abaixo da imagem */
+    margin: 0 auto; /* Para centralizar a imagem */
+    border-radius: 50%; /* Para dar um formato circular à imagem */
+}
+
+.txt-sobre {
+    max-width: 600px; /* Define a largura máxima do texto */
+}
+
+.txt-sobre h2 {
+    font-size: 50px;
+    justify-content: center;
+    line-height: 1.2;
+    color: #1f272d;
+    margin-bottom: 15px;
+}
+
+.txt-sobre p {
+    font-size: 18px; /* Define o tamanho da fonte do parágrafo */
+    margin-bottom: 15px; /* Adiciona um espaço abaixo de cada parágrafo */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+    color: #1f272d;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
